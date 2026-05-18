@@ -1,11 +1,18 @@
 {
   "name": "@vuenice/switch",
   "version": "0.1.1",
+  "type": "module",
   "main": "src/index.js",
-  "module": "src/index.js",
-  "types": "src/index.d.ts",
-  "homepage": "https://github.com/vuenice/vue-nice-switch",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src"
+  ],
   "description": "Vue 3 toggle/switch component.",
+  "homepage": "https://github.com/vuenice/vue-nice-switch",
   "keywords": [
     "vue-nice-switch",
     "vue3-switch",
@@ -15,24 +22,22 @@
   ],
   "author": "Yogesh Galav <mr.yogesh.galav@gmail.com> (https://github.com/yogeshgalav/)",
   "private": false,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "coverage": "vitest run --coverage"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.7.0",
-    "vue": "^3.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vuenice/vue-nice-switch"
   },
   "bugs": {
     "url": "https://github.com/vuenice/vue-nice-switch/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4",
@@ -41,6 +46,11 @@
     "vite": "^5.4.21",
     "vitest": "^1.0.0"
   },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.0"
+  },
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
   "eslintConfig": {
     "root": true,
     "env": {
